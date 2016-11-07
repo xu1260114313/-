@@ -1,24 +1,3 @@
-window.onload=function(){
-	var oDiv=document.getElementById("moves");
-			var oMove=document.getElementById("movess");
-			
-			oDiv.onmouseover=function(){
-				starMove(oDiv,'width',300,function(){
-					starMove(oDiv,'opacity',30)
-				})
-			}
-			oDiv.onmouseout=function(){
-				starMove(oDiv,'width',100,function(){
-					starMove(oDiv,'opacity',100)
-				})
-			}
-			oMove.onmouseover=function(){
-				starMove(oMove,'width',300)
-			}
-			oMove.onmouseout=function(){
-				starMove(oMove,'width',100)
-			}
-			
 			function starMove(obj,attr,iTarget,fn){
 				clearInterval(obj.timer);
 				obj.timer=setInterval(function(){
@@ -52,4 +31,4 @@ window.onload=function(){
 					return getComputedStyle(obj,false)[attr]
 				}
 			}
-};
+
